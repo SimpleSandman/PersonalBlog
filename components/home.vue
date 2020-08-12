@@ -82,7 +82,7 @@
 </template>
 
 <style lang="scss" scoped>
-    @import '~sass/_variables.scss';
+    @import '~/scss/_variables.scss';
     ol > li {
         margin-bottom: 1em;
     }
