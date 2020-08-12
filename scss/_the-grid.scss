@@ -6,7 +6,8 @@
 }
 
 .row {
-	margin: 0 -$gutter;
+	margin-right: -$gutter;
+	margin-left: -$gutter;
 	&:after {
 		display: table;
 		content: ' ';
@@ -14,6 +15,7 @@
 	}
 }
 
+// @TODO: Convert this to flex because we're better than this
 @for $i from 1 through 12 {
 	.col-#{$i} {
 		float: left;
