@@ -89,8 +89,8 @@ export default {
           content_type: 'blogPost',
         })
       ])
-        .then((entries) => {
-          return [ ...entries.items.map(entry => entry.fields.slug) ];
+        .then(([entries]) => {
+          return [ ...entries.items.map(entry => `/blog/${entry.fields.slug}`) ];
         });
     }
   }
