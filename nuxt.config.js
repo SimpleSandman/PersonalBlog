@@ -43,6 +43,8 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '~/plugins/contentful',
+    '~/plugins/posts',
   ],
   /*
   ** Auto import components
