@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Resume from '~/components/resume.vue';
+import Resume from '~/components/resume/resume.vue';
 export default {
     components: {
         resume: Resume,
