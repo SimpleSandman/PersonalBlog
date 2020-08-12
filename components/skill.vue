@@ -12,7 +12,7 @@
 </template>
 
 <style lang="scss">
-    @import '~sass/_variables.scss';
+    @import '~/scss/_variables.scss';
     .skill {
         margin-bottom: 1em;
         .name span:first-child {

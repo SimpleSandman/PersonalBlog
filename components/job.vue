@@ -50,8 +50,8 @@ export default {
         If I scope this the subCallout from above doesn't
         receive the .company-name styles
     */
-    @import '~sass/_mixins.scss';
-    @import '~sass/_variables.scss';
+    @import '~/scss/_mixins.scss';
+    @import '~/scss/_variables.scss';
     .company {
         margin-bottom: 25px;
         .where, .title, .timeline {

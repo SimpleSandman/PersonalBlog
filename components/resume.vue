@@ -38,8 +38,8 @@
 
 </template>
 <script>
-	import jobs from '../data/jobs.json';
-	import skills from '../data/skills.json';
+	import jobs from '~/assets/jobs.json';
+	import skills from '~/assets/skills.json';
 	import Skill from './skill';
 	import Job from './job';
 	export default {
@@ -61,8 +61,8 @@
 	}
 </style>
 <style lang="scss" scoped>
-	@import '~sass/_variables.scss';
-	@import '~sass/_mixins.scss';
+	@import '~/scss/_variables.scss';
+	@import '~/scss/_mixins.scss';
 	.resume {
 		margin: $gutter*3 auto;
 		.headline-row {
