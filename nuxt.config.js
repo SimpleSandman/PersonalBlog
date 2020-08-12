@@ -66,5 +66,22 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  environment: {
+    CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
+    CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
+    CONTENTFUL_ENV: process.env.CONTENTFUL_ENV,
+  },
+  generate: {
+    routes() {
+      return Promise.all([
+        client.getEntries({
+          content_type: 'blogPost',
+        })
+      ])
+        .then((entries) => {
+          return [ ...entries.items.map(entry => entry.fields.slug) ];
+        });
+    }
   }
 }
