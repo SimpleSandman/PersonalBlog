@@ -2,7 +2,7 @@
 
   <div>
 
-    <div class="container">
+    <div class="main-nav container">
       
       <div class="row">
 
@@ -27,3 +27,9 @@
   </div>
 
 </template>
+
+<style lang="scss" scoped>
+  .main-nav {
+    padding-top: 1.25rem;
+  }
+</style>
