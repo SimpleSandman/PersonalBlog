@@ -1,6 +1,8 @@
 <template>
     <div class="main-nav">
 
+        <input type="checkbox" @click.prevent id="hamburg">
+
         <label for="hamburg" class="mobile-only hamburg">
             <span></span>
             <span></span>
@@ -8,8 +10,6 @@
         </label>
 
         <img class="big-ass-head" src="/images/Le-Beard-3D.png" alt="My big ass head." />
-      
-        <input type="checkbox" @click.prevent id="hamburg">
 
         <div class="nav-links">
 
@@ -66,7 +66,7 @@
                 display: flex;
                 flex-direction: column;
                 order: 2;
-                width: 50px;
+                width: 40px;
                 height: 50px;
                 margin-left: auto;
                 margin-right: $gutter;
@@ -76,11 +76,26 @@
                     height: 5px;
                     margin-bottom: 8px;
                     background-color: #333;
+                    transition: transform 0.25s ease-out;
+                    transform: scale(-1);
                 }
             }
             #hamburg:checked {
                 & ~ .nav-links {
                     max-height: 175px;
+                }
+                & ~ .hamburg {
+                    span {
+                        &:nth-child(1) {
+                            transform: translateY(24px) translateX(13px) rotate(-45deg);
+                        }
+                        &:nth-child(2) {
+                            transform: translateY(5px) rotate(90deg);
+                        }
+                        &:nth-child(3) {
+                            transform: translateY(-2px) translateX(-13px) rotate(45deg);
+                        }
+                    }
                 }
             }
             .nav-links {
